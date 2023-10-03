@@ -4,6 +4,7 @@ number = random.randint(-10000, 10000)
 last = str(number)
 last = last[len(last) - 1]
 n = int(last)
+n = number % 10
 if number < 0:
     last = '-' + last
     n = n * -1
