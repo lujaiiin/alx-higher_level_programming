@@ -2,9 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 last = str(number)
-l = len(last)
-l = int(l)
-last = last[l - 1]
+last = last[len(last) - 1]
 n = int(last)
 if number < 0:
     last = '-' + last
