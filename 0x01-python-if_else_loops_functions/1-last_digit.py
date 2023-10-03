@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
+if number == str(number):
+    print("TypeError")
 last = str(number)
 last = last[len(last) - 1]
 n = int(last)
