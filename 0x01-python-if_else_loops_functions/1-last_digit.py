@@ -15,4 +15,4 @@ elif n == 0:
 elif n <= 5:
     print(f"Last digit of {number} is {last} and is less than 6 and not 0")
 else:
-    sys.stderr.write("Typederrror\n")
+    sys.stderr.write("TypeError\n")
