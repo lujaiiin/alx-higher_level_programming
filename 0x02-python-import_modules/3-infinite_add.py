@@ -7,5 +7,5 @@ if __name__ == "__main__":
         print(0)
     else:
         for i in range(1, al):
-            alli = int(alli) +  int(sys.argv[i])
+            alli = alli +  int(sys.argv[i])
         print("{}".format(alli))
