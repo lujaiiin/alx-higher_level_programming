@@ -5,5 +5,5 @@ if __name__ == "__main__":
     res = 0
     if argl != 1:
         for i in range(1, argl):
-            res = res +  int(sys.argv[i])
+            res = res + int(sys.argv[i])
     print("{}".format(res))
