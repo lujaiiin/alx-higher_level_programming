@@ -5,6 +5,6 @@ def max_integer(my_list=[]):
         for i in my_list:
             if (i > sume):
                 sume = i
-    else:
+    elif len(my_list) == 0:
         sume = None
     return sume
