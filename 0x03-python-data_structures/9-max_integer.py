@@ -7,4 +7,6 @@ def max_integer(my_list=[]):
                 sume = i
     elif len(my_list) == 0:
         sume = None
+    else:
+        sume = None
     return sume
