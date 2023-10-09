@@ -19,7 +19,7 @@ void print_python_list_info(PyObject *p)
 
 	while (i < len)
 	{
-		printf("Element %i: ", i);
+		printf("Element %i:", i);
 		kai = PyList_GetItem(p, i);
 		printf(" %s\n", Py_TYPE(kai)->tp_name);
 		i++;
