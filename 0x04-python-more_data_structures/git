@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "set lambda map"
+git push
