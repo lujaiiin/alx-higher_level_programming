@@ -9,7 +9,7 @@
 void print_python_bytes(PyObject *p)
 {
 	long int len, j, lim;
-	char str;
+	char *str;
 
 	printf("[.] bytes object info\n");
 
