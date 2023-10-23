@@ -3,4 +3,5 @@
 def raise_exception():
     a = 10
     b = "alaa"
-    print("{} + {}".format(a + b))
+    re = a + b
+    return re
