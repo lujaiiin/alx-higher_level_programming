@@ -4,4 +4,4 @@ def raise_exception():
     a = 10
     b = "alaa"
     re = a + b
-    return re
+    raise_exception()
