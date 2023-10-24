@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Modules of square"""
+"""Module of square"""
 
 class Square:
-    """ Represents a square ,it's empty class"""
+    """Represents a square ,with a name"""
     pass
