@@ -3,4 +3,4 @@
 
 class Square:
     """ Represents a square ,it's empty class """
-    pass
+    pass #empty
