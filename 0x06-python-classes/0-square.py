@@ -2,5 +2,5 @@
 """Modules of square"""
 
 class Square:
-    """ Represents a square ,it's empty class """
-    pass #empty
+    """ Represents a square ,it's empty class"""
+    pass
