@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-Module
+Rectangle class
 """
 
 
 class Rectangle:
-    """Rectangle class"""
+    """Rectangle ll class"""
     def __init__(self, width=0, height=0):
         """intial fun"""
         self.width = width
@@ -48,3 +48,18 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
+
+    def __str__(self):
+        """return prinsa"""
+        string = ""
+        if self.__width != 0 and self.__height != 0:
+            string += "\n".join("#" * self.__width
+                                for i in range(self.__height))
+            return string
+    def __repr__(self):
+        """return ala"""
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        """bye rec"""
+        print("Bye rectangle...")
