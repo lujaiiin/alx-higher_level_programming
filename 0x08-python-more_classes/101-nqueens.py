@@ -17,9 +17,9 @@ def nad(li):
         y = j
         ary = []
         for l in range(li):
-            if l != y and l != (li - i)
-            a = [y, l]
-            ary.append(a)
+            if l != y and l != (li - i):
+                a = [y, l]
+                ary.append(a)
         aryy.append(ary)
         i += 1
 
