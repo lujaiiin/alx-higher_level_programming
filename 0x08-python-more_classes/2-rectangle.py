@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module"""
 
+
 class Rectangle:
     """Rectangle ll class"""
     def __init__(self, width=0, height=0):
