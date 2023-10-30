@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "Dynamic lib"
+git commit -m "Python OOP"
 git push
