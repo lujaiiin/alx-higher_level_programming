@@ -14,8 +14,8 @@ Test 2 int:
 	13
 
 Test 2 float:
-	>>> add_integer(8.9, 9.9)
-	17
+	>>> add_integer(0.0, 5.4)
+	5
 
 Test 0:
 	>>> add_integer(0)
