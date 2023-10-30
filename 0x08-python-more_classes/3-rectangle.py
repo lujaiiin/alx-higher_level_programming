@@ -51,8 +51,8 @@ class Rectangle:
 
     def __str__(self):
         """return prinsa"""
-        str = ""
+        stre = ""
         if self.__width != 0 and self.__height != 0:
-            str += "\n".join("#" * self.__width
+            stre += "\n".join("#" * self.__width
                     for i in range(self.__height))
-            return str
+            return stre
