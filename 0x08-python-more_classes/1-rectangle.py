@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """
-h
-e
-y
+class rec
 """
 
 
 class Rectangle:
     """
-    empty
+    Rectangle class
     """
 
     def __init__(self, width=0, height=0):
@@ -17,7 +15,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """ getter """
+        """ getter wi """
         return self.__width
 
     @width.setter
