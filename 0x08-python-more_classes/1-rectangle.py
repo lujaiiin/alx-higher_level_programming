@@ -17,7 +17,7 @@ class Rectangle:
 
     @property 
     def width(self):
-        """geteer for private."""
+        """getter for private."""
         return self.__width
 
     @width.setter
@@ -36,7 +36,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """seteer for private."""
+        """setter for private."""
         if type(value) != int:
             raise TypeError('height must be an integer')
         if value < 0:
