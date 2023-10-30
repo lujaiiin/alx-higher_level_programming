@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Module.
+class Rectangle
 """
 
 class Rectangle:
-    """class to see the Rectangle"""
+    """Empty to see the Rectangle"""
     pass
