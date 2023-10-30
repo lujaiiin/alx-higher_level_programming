@@ -16,3 +16,7 @@ def matrix_divided(matrix, div):
             if type(j) != int and type(j) != float:
                 raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
         return [[round(j / div, 2) for j in i] for i in matrix]
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/2-matrix_divided.txt")

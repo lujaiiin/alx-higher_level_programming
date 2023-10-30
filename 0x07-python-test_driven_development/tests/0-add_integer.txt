@@ -1,0 +1,66 @@
+import function:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Test 1 int:
+	>>> add_integer(5)
+	103
+
+Test 1 float:
+	>>> add_integer(5.9)
+	103
+
+Test 2 int:
+	>>> add_integer(5, 8)
+	13
+
+Test 2 float:
+	>>> add_integer(8.9, 9.9)
+	17
+
+Test 0:
+	>>> add_integer(0)
+	98
+
+Test neg and pos:
+	>>> add_integer(12, -9)
+	3
+
+Test pos and neg:
+	>>> add_integer(-9, 12)
+	3
+
+Test pos flo and neg flo:
+	>>> add_integer(6.4, -6.4)
+	0
+
+Test neg flo and pos flo:
+	>>> add_integer(-6.4, 6.4)
+	0
+
+Test flo and int:
+	>>> add_integer(9.0, 9)
+	18
+
+Test two str:
+	>>> add_integer("lib", "ya")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Test first:
+	>>> add_integer("jaja", 0)
+	Traceback (most recent call last):
+        ...
+    	TypeError: a must be an integer
+
+Test second:
+	>>> add_integer(19, "lala")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+Test none:
+	>>> add_integer(None, None)
+	Traceback (most recent call last):
+        ...
+    	TypeError: a must be an integer
