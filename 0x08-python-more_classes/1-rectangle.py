@@ -5,20 +5,19 @@ class Regtangle
 
 
 class Rectangle:
-    """Rectangle class to de"""
+    """Rectangle class to de."""
     def __init__(self, width=0, height=0):
-        """Initializes fun"""
         self.width = width
         self.height = height
 
     @property 
     def width(self):
-        """geteer for private"""
+        """geteer for private."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setter for private"""
+        """setter for private."""
         if type(value) != int:
             raise TypeError('width must be an integer')
         if value < 0:
@@ -27,12 +26,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """getter for private"""
+        """getter for private."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """seteer for private"""
+        """seteer for private."""
         if type(value) != int:
             raise TypeError('height must be an integer')
         if value < 0:
