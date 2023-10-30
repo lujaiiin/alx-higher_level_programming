@@ -6,7 +6,10 @@ Rectangle class
 
 class Rectangle:
     """Rectangle ll class"""
+
     number_of_instances = 0
+    """num"""
+
     def __init__(self, width=0, height=0):
         """intial fun"""
         self.width = width
