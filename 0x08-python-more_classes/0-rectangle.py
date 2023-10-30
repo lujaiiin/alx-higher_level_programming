@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module."""
+"""
+Module.
+"""
 
 class Rectangle:
     """class to see the Rectangle"""
