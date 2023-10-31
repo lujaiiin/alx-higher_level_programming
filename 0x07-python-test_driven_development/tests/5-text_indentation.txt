@@ -1,0 +1,98 @@
+Import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test tw:
+    >>> text_indentation("hala l")
+    hala l
+
+Test on:
+    >>> text_indentation("oop     ")
+    oop
+
+Test tr:
+    >>> text_indentation("      libya")
+    libya
+
+Tes y:
+    >>> text_indentation("      ")
+    <BLANKLINE>
+
+Test l:
+    >>> text_indentation("la la")
+    la la
+
+Test lala:
+    >>> text_indentation("\n")
+    <BLANKLINE>
+
+Test ka:
+    >>> text_indentation("\n\n")
+    <BLANKLINE>
+
+Test 9:
+    >>> text_indentation(".?:")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test ss:
+    >>> text_indentation("       libya          ")
+    libya
+
+Test e:
+    >>> text_indentation("")
+    <BLANKLINE>
+
+Test 3:
+    >>> text_indentation("?\n\n.\n\n:")
+    ?
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test 2:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test 4:
+    >>> text_indentation("?li.")
+    ?
+    <BLANKLINE>
+    li.
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test 8:
+    >>> text_indentation("     :   ")
+    :
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test lolo:
+    >>> text_indentation("  ?  :  .  ")
+    ?
+    <BLANKLINE>
+      :
+    <BLANKLINE>
+      .
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test 1:
+    >>> text_indentation(9)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
