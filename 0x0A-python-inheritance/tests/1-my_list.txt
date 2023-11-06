@@ -1,0 +1,8 @@
+Import module:
+       >>>  MyList = __import__('1-my_list').MyList
+
+Test 1:
+    >>> m = MyList()
+    >>> m.append(9)
+    >>> print(m)
+    [9]
