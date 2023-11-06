@@ -9,6 +9,7 @@ class BaseGeometry:
         """la function"""
 
         raise Exception('area() is not implemented')
+
     def integer_validator(self, name, value):
         """int fun"""
 
