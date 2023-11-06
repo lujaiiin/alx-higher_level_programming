@@ -4,6 +4,6 @@
 def inherits_from(obj, a_class):
     """inhert fun"""
 
-    if dir(obj) == dir(a_class):
+    if dir(obj) == dir(a_class) and isinstance(obj, a_class):
         return True
     return False
