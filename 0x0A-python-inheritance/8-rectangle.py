@@ -2,6 +2,7 @@
 """Mudules"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """rec class inhert a base class"""
 
