@@ -1,3 +1,107 @@
-Import module:
+Import function from module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+Correct Class:
+    >>> g = BaseGeometry()
+    >>> type(g) == BaseGeometry
+    True
+
+area method is an in:
+    >>> type(BaseGeometry.__dict__['area'])
+    <class 'function'>
+
+area method called via class w:
+    >>> g.__class__.area()
+    Traceback (most recent call last):
+    TypeError: area() missing 1 required positional argument: 'self'
+
+area method a:
+    >>> g.area(10)
+    Traceback (most recent call last):
+    TypeError: area() takes 1 positional argument but 2 were given
+
+area me:
+    >>> g.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+i:
+    >>> type(BaseGeometry.__dict__['integer_validator'])
+    <class 'function'>
+
+integer_validator method called via class with no args:
+    >>> g.__class__.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+integer_validator method arg test (0 args):
+    >>> g.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    
+integer_validator method arg test (3 args):
+    >>> g.integer_validator(1, 1, 1)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+integer_validator method float.0 value:
+    >>> g.integer_validator("foo", 3.0)
+    Traceback (most recent call last):
+    TypeError: foo must be an integer
+
+integer_validator method float.x value:
+    >>> g.integer_validator("arg", 3.14)
+    Traceback (most recent call last):
+    TypeError: arg must be an integer
+
+integer_validator method string value:
+    >>> g.integer_validator("Bar", "bar")
+    Traceback (most recent call last):
+    TypeError: Bar must be an integer
+
+integer_validator method bool value:
+    >>> g.integer_validator("zar", True)
+    Traceback (most recent call last):
+    TypeError: zar must be an integer
+
+integer_validator method list value:
+    >>> g.integer_validator("a", [1])
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+ihod None value:
+    >>> g.integer_validator("foo", None)
+    Traceback (most recent call last):
+    TypeError: foo must be an integer
+
+integer_validator method:
+    >>> g.integer_validator("key", 0)
+    Traceback (most recent call last):
+    ValueError: key must be greater than 0 
+
+negative value:
+    >>> g.integer_validator("key", -1000)
+    Traceback (most recent call last):
+    ValueError: key must be greater than 0
+
+integer_validator method ok value:
+    >>> g.integer_validator("key", 98)
+    
+inok value 2:
+    >>> g.integer_validator("key", 1)
+
+in string:
+    >>> g.integer_validator("", 1)
+
+integer_string:
+    >>> g.integer_validator(None, 1)
+
+integertuple:
+    >>> g.integer_validator("Foo", (1, 2))
+    Traceback (most recent call last):
+    TypeError: Foo must be an integer
+
+integedic:
+    >>> g.integer_validator("Foo", {1, 2})
+    Traceback (most recent call last):
+    TypeError: Foo must be an integer
