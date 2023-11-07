@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""Modules"""
 import random
 import sys
 from time import sleep
