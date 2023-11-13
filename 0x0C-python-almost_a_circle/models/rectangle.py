@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""Rectangle class module"""
+"""Module"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle class sup from base"""
+    """Rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """class constructior"""
+        """inital"""
+
         super().__init__(id)
         self.width = width
         self.height = height
@@ -16,12 +17,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width getter"""
+        """prop"""
+
         return self.__width
 
     @width.setter
     def width(self, value):
-        """width setter"""
+        """setter"""
+
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -30,12 +33,14 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """height getter"""
+        """prop"""
+
         return self.__height
 
     @height.setter
     def height(self, value):
-        """height setter"""
+        """setter"""
+
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -44,12 +49,14 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """x getter"""
+        """pro"""
+
         return self.__x
 
     @x.setter
     def x(self, value):
-        """x setter"""
+        """setter"""
+
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -58,12 +65,14 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """y getter"""
+        """y pro"""
+
         return self.__y
 
     @y.setter
     def y(self, value):
-        """y setter"""
+        """setter"""
+
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -81,27 +90,24 @@ class Rectangle(Base):
             print(' ' * self.__x + '#' * self.__width)
 
     def __str__(self):
-        """returns formated string of the obj"""
-        id = self.id
-        wi = self.width
-        he = self.height
-        x = self.x
-        y = self.y
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, wi, he)
+        """sre"""
+
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width,self.height)
 
     def update(self, *args, **kwargs):
-        """updates obj attrs"""
+        """update fun"""
+
         if args is not None and len(args) != 0:
-            a = len(args)
-            if a >= 1:
+            k = len(args)
+            if k >= 1:
                 self.id = args[0]
-            if a >= 2:
+            if k >= 2:
                 self.width = args[1]
-            if a >= 3:
+            if k >= 3:
                 self.height = args[2]
-            if a >= 4:
+            if k >= 4:
                 self.x = args[3]
-            if a >= 5:
+            if k >= 5:
                 self.y = args[4]
         else:
             if "id" in kwargs:
@@ -116,7 +122,8 @@ class Rectangle(Base):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
-        """returns the object as a dict"""
+        """dectonary"""
+
         return {"id": self.id, "width": self.width,
                 "height": self.height, "x": self.x,
                 "y": self.y}
