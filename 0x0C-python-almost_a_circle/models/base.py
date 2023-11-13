@@ -25,92 +25,97 @@ class Base:
     def to_json_string(list_dictionaries):
         """"json"""
 
-        a = list_dictionaries
-        if a is None or type(a) is not list or len(a) == 0:
+        i = list_dictionaries
+        if i is None or type(i) is not list or len(i) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """"dict to file"""
-        name = cls.__name__
-        ls = []
+        """"file save"""
+
+        n = cls.__name__
+        liste = []
         if list_objs is not None:
-            for a in list_objs:
-                ls.append(a.to_dictionary())
-        with open(name + ".json", "w+", encoding="utf-8") as file:
-            file.write(Base.to_json_string(ls))
+            for i in list_objs:
+                liste.append(i.to_dictionary())
+        with open(n + ".json", "w+", encoding="utf-8") as file:
+            file.write(Base.to_json_string(liste))
 
     @staticmethod
     def from_json_string(json_string):
-        """"dict to json"""
-        a = json_string
-        if a is None or type(a) is not str or len(a) == 0:
+        """"json"""
+
+        i = json_string
+        if i is None or type(i) is not str or len(i) == 0:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
-        """"crates new obj"""
-        name = cls.__name__
-        if name == "Rectangle":
-            tmp = cls(1, 1)
-        elif name == "Square":
-            tmp = cls(1)
+        """"create"""
+
+        n = cls.__name__
+        if n == "Rectangle":
+            t = cls(1, 1)
+        elif n == "Square":
+            t = cls(1)
         else:
-            tmp = None
-        tmp.update(**dictionary)
-        return tmp
+            t = None
+        t.update(**dictionary)
+        return t
 
     @classmethod
     def load_from_file(cls):
-        """"crates new obj from avlues in file"""
-        name = cls.__name__ + ".json"
-        if not exists(name):
+        """"file"""
+
+        n = cls.__name__ + ".json"
+        if not exists(n):
             return []
-        with open(name, "r+", encoding="utf-8") as file:
-            tmp = cls.from_json_string(file.read())
-        ls = []
-        for a in tmp:
-            ls.append(cls.create(**a))
-        return ls
+        with open(n, "r+", encoding="utf-8") as file:
+            t = cls.from_json_string(file.read())
+        liste = []
+        for i in t:
+            liste.append(cls.create(**i))
+        return liste
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """"dict to file"""
-        name = cls.__name__
-        ls = []
+        """"file"""
+        n = cls.__name__
+        liste = []
         if list_objs is not None:
-            if name == "Rectangle":
-                for a in list_objs:
-                    ls.append([a.id, a.width, a.height, a.x, a.y])
+            if n == "Rectangle":
+                for i in list_objs:
+                    liste.append([i.id, i.width, i.height, i.x, i.y])
             else:
-                for a in list_objs:
-                    ls.append([a.id, a.size, a.x, a.y])
-        with open(name + ".csv", "w+", encoding="utf-8", newline='') as file:
+                for i in list_objs:
+                    liste.append([i.id, i.size, i.x, i.y])
+        with open(n + ".csv", "w+", encoding="utf-8", newline='') as file:
             writer = csv.writer(file)
             writer.writerows(ls)
 
     @classmethod
     def load_from_file_csv(cls):
-        """"crates new obj from avlues in file"""
-        name = cls.__name__
-        if not exists(name + ".csv"):
+        """"from file"""
+
+        n = cls.__name__
+        if not exists(n + ".csv"):
             return []
-        with open(name + ".csv", "r+", encoding="utf-8", newline='') as file:
-            tmp = csv.reader(file)
-            ls = []
-            for a in tmp:
-                a = [int(i) for i in a]
-                if name == "Rectangle":
-                    dic = {"id": a[0], "width": a[1], "height": a[2],
-                           "x": a[3], "y": a[4]}
-                elif name == "Square":
-                    dic = {"id": a[0], "size": a[1], "x": a[2], "y": a[3]}
+        with open(n + ".csv", "r+", encoding="utf-8", newline='') as file:
+            t = csv.reader(file)
+            liste = []
+            for j in t:
+                j = [int(i) for i in j]
+                if n == "Rectangle":
+                    di = {"id": j[0], "width": j[1], "height": j[2],
+                           "x": j[3], "y": j[4]}
+                elif n == "Square":
+                    di = {"id": a[0], "size": a[1], "x": a[2], "y": a[3]}
                 else:
                     return []
-                ls.append(cls.create(**dic))
-        return ls
+                liste.append(cls.create(**di))
+        return liste
 
     @staticmethod
     def draw(list_rectangles, list_squares):
