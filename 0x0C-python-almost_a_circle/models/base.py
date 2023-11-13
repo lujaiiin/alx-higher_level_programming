@@ -108,7 +108,7 @@ class Base:
                 j = [int(i) for i in j]
                 if n == "Rectangle":
                     di = {"id": j[0], "width": j[1], "height": j[2],
-                           "x": j[3], "y": j[4]}
+                            "x": j[3], "y": j[4]}
                 elif n == "Square":
                     di = {"id": a[0], "size": a[1], "x": a[2], "y": a[3]}
                 else:
