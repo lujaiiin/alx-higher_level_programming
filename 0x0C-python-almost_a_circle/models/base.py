@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""base class module"""
+"""module"""
 import json
 from os.path import exists
 import csv
@@ -9,7 +9,7 @@ from random import random
 
 
 class Base:
-    """base class for all shapes"""
+    """base class"""
     __nb_objects = 0
 
     def __init__(self, id=None):
