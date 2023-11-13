@@ -51,7 +51,7 @@ class Rectangle(Base):
     def x(self, value):
         """x setter"""
 
-        self.val("x", value)
+        self.validate_integer("x", value)
         self.__x = value
 
     @property
@@ -64,10 +64,10 @@ class Rectangle(Base):
     def y(self, value):
         """setter"""
 
-        self.val("y", value)
+        self.validate_integer("y", value)
         self.__y = value
 
-    def val(self, name, value, eq=True):
+    def validate_integer(self, name, value, eq=True):
         """val"""
 
         if type(value) != int:
