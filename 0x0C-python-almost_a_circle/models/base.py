@@ -13,7 +13,8 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """class constructior"""
+        """init"""
+
         if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
@@ -22,7 +23,8 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """"dict to json"""
+        """"json"""
+
         a = list_dictionaries
         if a is None or type(a) is not list or len(a) == 0:
             return "[]"
