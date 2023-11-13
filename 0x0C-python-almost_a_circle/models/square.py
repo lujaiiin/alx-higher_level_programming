@@ -1,57 +1,53 @@
 #!/usr/bin/python3
-"""Module"""
+"""Square module"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """square class"""
+    """Square rectangle"""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """init"""
-
+        """constructior"""
         super().__init__(size, size, x, y, id)
-
-    def __str__(self):
-        """str"""
-
-        return '[{}] ({}) {}/{} - {}'.\
-            format(type(self).__name__, self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
-        """size"""
-
+        """getter"""
         return self.width
 
     @size.setter
     def size(self, value):
         """setter"""
-
         self.width = value
         self.height = value
 
-    def __update(self, id=None, size=None, x=None, y=None):
-        """update"""
-
-        if id is not None:
-            self.id = id
-        if size is not None:
-            self.size = size
-        if x is not None:
-            self.x = x
-        if y is not None:
-            self.y = y
+    def __str__(self):
+        """returns the obj"""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
 
     def update(self, *args, **kwargs):
-        """update"""
-
-        if args:
-            self.__update(*args)
-        elif kwargs:
-            self.__update(**kwargs)
+        """update attrs"""
+        if args is not None and len(args) != 0:
+            a = len(args)
+            if a >= 1:
+                self.id = args[0]
+            if a >= 2:
+                self.size = args[1]
+            if a >= 3:
+                self.x = args[2]
+            if a >= 4:
+                self.y = args[3]
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
 
     def to_dictionary(self):
-        """dict"""
-
-        return {"id": self.id, "size": self.width,
+        """returns dict"""
+        return {"id": self.id, "size": self.size,
                 "x": self.x, "y": self.y}
