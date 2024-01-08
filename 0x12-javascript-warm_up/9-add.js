@@ -1,6 +1,6 @@
 #!/usr/bin/node
 function add(a, b) {
-  let x = a + b;
+  const x = a + b;
   console.log(x);
 }
 
