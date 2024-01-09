@@ -10,7 +10,7 @@ class Square extends SquareP {
       c = 'X';
     }
     for (i = 0; i < this.height; i++) {
-        x = '';
+      x = '';
       for (j = 0; j < this.width; j++) {
         x += c;
       }
